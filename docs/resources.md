@@ -1,10 +1,11 @@
-# Resources
+| [Home](https://peanutnotcashew.github.io/Robotics_2023) | [Resources](https://peanutnotcashew.github.io/Robotics_2023/resources) |
 ---
+
+# Resources
 ## Tutorials
 All robotics code must be written in Java. As such, new coders should review at least one Java tutorial. Returning coders only need to refresh on Java syntax.  
 
-This coming robotics season, I would like to use Git to manage our code. Git is a common version control system that keeps track of the changes made to code. Coders who do not know how to use Git should follow the Learn Git Branching tutorial.  
-Our GitHub repository, as of now, is hosted at [https://github.com/PeanutNotCashew/Robotics_2023](https://github.com/PeanutNotCashew/Robotics_2023).
+This coming robotics season, I would like to use Git to manage our code. Git is a common version control system that keeps track of the changes made to code. Coders who do not know how to use Git should follow the Learn Git Branching tutorial.
 
 ### Java
 - [The Official Java Tutorial](https://docs.oracle.com/javase/tutorial/): At least the "Language Basics" lesson in the "Learning the Java Module" should be read if following this tutorial.  
