@@ -1,0 +1,17 @@
+# Important!
+All code must be written in Java.
+
+# Tutorials
+## Java
+[The Official Java Tutorial](https://docs.oracle.com/javase/tutorial/): At least the "Language Basics" lesson in the "Learning the Java Module" should be read if following this tutorial.  
+[Codeacademy](https://www.codecademy.com/learn/learn-how-to-code): According to Codeacademy, this tutorial/course takes around 6 hours. I haven't taken this course, but it seems if you follow this tutorial, you should complete all modules.  
+[Alex Lee](https://youtu.be/RRubcjpTkks): A very basic 14 minute YouTube tutorial on Java. The teacher uses Eclipse, but you can just use a text/code editor like VSCode, especially since the code is being run on the robot - not a laptop.
+[Java 8 Documentation](https://docs.oracle.com/javase/8/docs/api/): The full, official Java documentation. This is not a tutorial.
+## Git
+[Learn Git Branching](https://learngitbranching.js.org/): Probably the best Git tutorial to exist. You only really need to do the intro sequences in the main and remote sections. However, I would *heavily* recommend doing all of the levels since Git is often used when coding in groups.  
+[Git Cheatsheet](https://training.github.com/downloads/github-git-cheat-sheet.pdf): Good for referencing Git commands
+
+# FIRST Robotics Documentation
+The official documentation is located **[here](https://ftctechnh.github.io/ftc_app/doc/javadoc/overview-summary.html)**.  
+The unofficial documentation is located **[here](https://ftc-java.github.io/)**.  
+Some additional demo code is available **[here](https://github.com/FIRST-Tech-Challenge/FtcRobotController)**.
