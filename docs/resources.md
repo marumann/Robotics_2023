@@ -1,4 +1,4 @@
-| [Home](https://peanutnotcashew.github.io/Robotics_2023) | [Resources](https://peanutnotcashew.github.io/Robotics_2023/resources) |
+| [Home](https://peanutnotcashew.github.io/Robotics_2023) | [**Coder Resources**](https://peanutnotcashew.github.io/Robotics_2023/resources) |
 ---
 
 # Resources
