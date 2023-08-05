@@ -1,4 +1,6 @@
+
 | [**Home**](https://peanutnotcashew.github.io/Robotics_2023) | [Coder Resources](https://peanutnotcashew.github.io/Robotics_2023/resources) |
+---
 
 # Home
 Welcome to the BSGE Robotics home!  
