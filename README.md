@@ -1,2 +1,2 @@
 # Robotics_2023
-A robotics repo for the 2023-2024 year.
+The [site](https://peanutnotcashew.github.io/Robotics_2023/).
