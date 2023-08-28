@@ -14,7 +14,7 @@ This coming robotics season, I would like to use Git to manage our code. Git is 
 - [Java 8 Documentation](https://docs.oracle.com/javase/8/docs/api/): The full, official Java documentation. This is not a tutorial.  
 
 ## Git
-- [Learn Git Branching](https://learngitbranching.js.org/): Probably the best Git tutorial to exist. You only really need to do the intro sequences in the main and remote sections. However, I would *heavily* recommend doing all of the levels since Git is used very often, even in the professional workplace.  
+- [Learn Git Branching](https://learngitbranching.js.org/): Probably the best Git tutorial to exist. You only really need to do the intro sequences in the main and remote sections. However, I would recommend doing all of the levels, just because it'll be useful in the future, especially if you're intending to pursue coding further.  
 - [Git Cheatsheet](https://training.github.com/downloads/github-git-cheat-sheet.pdf): Good for referencing Git commands  
 
 # FIRST Robotics Documentation
