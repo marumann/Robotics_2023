@@ -1,5 +1,5 @@
 # Robotics 2023
-The BSGE robotics team has not begun meeting for the 2023-2024 school year.  
+The BSGE robotics team is meeting biweekly.  
 
 For previous year's designs, see `Old_Designs`.  
 Files for the website are in `docs`.  
