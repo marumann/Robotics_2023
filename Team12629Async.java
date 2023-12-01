@@ -52,6 +52,7 @@ public class Team13645Async extends LinearOpMode {
         drivingMotors[1] = hardwareMap.get(DcMotor.class, "motor_fr");
         drivingMotors[2] = hardwareMap.get(DcMotor.class, "motor_bl");
         drivingMotors[3] = hardwareMap.get(DcMotor.class, "motor_br");
+        drivingMotors[4] = hardwareMap.get(DcMotor.class, "motor_br");
 
         // Note to self: Add claw motors and servos
 
