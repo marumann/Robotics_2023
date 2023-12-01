@@ -45,6 +45,26 @@ public class Team13645Async extends LinearOpMode {
     private void GoDistance(){}
     private void Rotate(){}
 
+    public class Team13645 extends LinearOpMode {
+	
+    // Motor Vars    
+    private DcMotor[] drivingMotors = new DcMotor[4];
+
+    // To track time
+    private ElapsedTime time = new ElapsedTime();
+
+    // Decides which way the bot is moving
+	float whichWay(boolean x, boolean y) {
+		if ((x == true) && (y == false)) {
+			return 0.75f;
+		} else if ((x == false) && (y == true)) {
+			return -0.75f;
+		} else {
+			return 0f;
+		}
+	}
+
+
     @Override
     public void runOpMode(){
         // Mapping
@@ -52,7 +72,7 @@ public class Team13645Async extends LinearOpMode {
         drivingMotors[1] = hardwareMap.get(DcMotor.class, "motor_fr");
         drivingMotors[2] = hardwareMap.get(DcMotor.class, "motor_bl");
         drivingMotors[3] = hardwareMap.get(DcMotor.class, "motor_br");
-        drivingMotors[4] = hardwareMap.get(DcMotor.class, "motor_br");
+        drivingMotors[4] = hardwareMap.get(DcMotor.class, "motor_arm");
 
         // Note to self: Add claw motors and servos
 
