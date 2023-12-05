@@ -31,6 +31,8 @@ public class Team13645Async extends LinearOpMode {
     private DcMotor clawMotor;
     private Servo clawRotServo;
     private Servo clawCloseServo;
+    // Webcam Servo Init
+    private Servo camServo;
     // April Tag Init
     private AprilTagProcessor aprilTag;
     private VisionPortal visionPortal;
@@ -42,8 +44,26 @@ public class Team13645Async extends LinearOpMode {
     private void ClawRest(){}
     private void ClawToGround(){}
     private void ClawToBoard(){}
-    private void GoDistance(){}
-    private void Rotate(){}
+
+    private void GoDistance(float power){
+        drivingMotors[0].setDirection(DcMotor.Direction.REVERSE);
+        drivingMotors[3].setDirection(DcMotor.Direction.REVERSE);
+
+        drivingMotors[0].setPower(power);
+        drivingMotors[2].setPower(power);
+        drivingMotors[1].setPower(power);
+        drivingMotors[3].setPower(power);
+    }
+
+    private void Rotate(float power){
+        drivingMotors[0].setDirection(DcMotor.Direction.FORWARD);
+        drivingMotors[3].setDirection(DcMotor.Direction.FORWARD);
+
+        drivingMotors[0].setPower(power);
+        drivingMotors[2].setPower(power);
+        drivingMotors[1].setPower(power);
+        drivingMotors[3].setPower(power);
+    }
 
     public class Team13645 extends LinearOpMode {
 	
@@ -96,6 +116,7 @@ public class Team13645Async extends LinearOpMode {
         time.reset();
 
         while (opModeIsActive()){
+            GoDistance(1.0f);
             // Output any debug or other info to controller
             telemetry.addData("Time", time.toString());
             telemetry.update();
