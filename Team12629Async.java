@@ -5,6 +5,16 @@
  * 4 motors, for wheels
  * 1 motor and 2 servos, for claws
  */
+/* PLAN FOR AUTONOMOUS PERIOD
+1. Drive forward to arms distance from each spike mark
+2. Rotate the camera 360 degrees to scan the apriltag on the backboard
+3. Program decides whether to drive the long or short distance
+4. Turn in the direction of the apriltag.
+5. Place down the purple pixel.
+6. Drive forward to backboard.
+7. Place yellow pixel on backboard.
+8. Stay parked in backboard area.
+*/
 
 // FIRST Robotics imports
 package org.firstinspires.ftc.teamcode;
