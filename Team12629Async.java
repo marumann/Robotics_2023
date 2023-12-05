@@ -1,10 +1,11 @@
 /*
- * Robot design for 2023-2024 FTC - Asyncronous period
+ * Robot design for 2023-2024 FTC - Asynchronous period
  * 
  * Hardware:
  * 4 motors, for wheels
  * 1 motor and 2 servos, for claws
-
+ * 1 servo, for claws
+ * 
  +-+-+ PLAN FOR AUTONOMOUS PERIOD +-+-+
 1. Drive forward to arms distance from each spike mark
 2. Rotate the camera 360 degrees to scan the apriltag on the backboard
@@ -25,7 +26,7 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.util.ElapsedTime;
 // Motors and Servos
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.Servo;
+import com.qualcomm.robotcore.hardware.CRServo;
 // Webcam and April Tags
 import org.firstinspires.ftc.robotcore.external.hardware.camera.BuiltinCameraDirection;
 import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
@@ -39,10 +40,10 @@ public class Team13645Async extends LinearOpMode {
     private DcMotor[] drivingMotors = new DcMotor[4];
     // Claw Init
     private DcMotor clawMotor;
-    private Servo clawRotServo;
-    private Servo clawCloseServo;
+    private CRServo clawRotServo;
+    private CRServo clawCloseServo;
     // Webcam Servo Init
-    private Servo camServo;
+    private CRServo camServo;
     // April Tag Init
     private AprilTagProcessor aprilTag;
     private VisionPortal visionPortal;
@@ -91,10 +92,10 @@ public class Team13645Async extends LinearOpMode {
         drivingMotors[3] = hardwareMap.get(DcMotor.class, "wheel_br");
 
         clawMotor = hardwareMap.get(DcMotor.class, "claw_motor");
-        clawRotServo = hardwareMap.get(Servo.class, "claw_rot");
-        clawCloseServo = hardwareMap.get(Servo.class, "claw_close");
+        clawRotServo = hardwareMap.get(CRServo.class, "claw_rot");
+        clawCloseServo = hardwareMap.get(CRServo.class, "claw_close");
 
-        camServo = hardwareMap.get(Servo.class, "camera");
+        camServo = hardwareMap.get(CRServo.class, "camera");
         aprilTag = AprilTagProcessor.easyCreateWithDefaults();
         visionPortal = VisionPortal.easyCreateWithDefaults(
             hardwareMap.get(WebcamName.class, "Webcam 1"), aprilTag);
@@ -116,7 +117,7 @@ public class Team13645Async extends LinearOpMode {
         time.reset();
 
         while (opModeIsActive()){
-            GoDistance(1.0f);
+            goDistance(1.0f);
             // Output any debug or other info to controller
             telemetry.addData("Time", time.toString());
             telemetry.update();
