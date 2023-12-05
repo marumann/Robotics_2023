@@ -4,8 +4,8 @@
  * Hardware:
  * 4 motors, for wheels
  * 1 motor and 2 servos, for claws
- */
-/* PLAN FOR AUTONOMOUS PERIOD
+
+ +-+-+ PLAN FOR AUTONOMOUS PERIOD +-+-+
 1. Drive forward to arms distance from each spike mark
 2. Rotate the camera 360 degrees to scan the apriltag on the backboard
 3. Program decides whether to drive the long or short distance
