@@ -41,11 +41,17 @@ public class Team13645Async extends LinearOpMode {
     private int aprilIterations = 0;
 
     // Function Definitions ----------------------------------------------
-    private void ClawRest(){}
-    private void ClawToGround(){}
-    private void ClawToBoard(){}
+    private void clawPos(int position){
+        if (position == 1) {
+            // Claw rest
+        } else if (position == 2) {
+            // Claw pick up from ground?
+        } else if (position == 3) {
+            // Claw pick up from board
+        }
+    }
 
-    private void GoDistance(float power){
+    private void goDistance(float power){
         drivingMotors[0].setDirection(DcMotor.Direction.REVERSE);
         drivingMotors[3].setDirection(DcMotor.Direction.REVERSE);
 
@@ -55,7 +61,7 @@ public class Team13645Async extends LinearOpMode {
         drivingMotors[3].setPower(power);
     }
 
-    private void Rotate(float power){
+    private void rotate(float power){
         drivingMotors[0].setDirection(DcMotor.Direction.FORWARD);
         drivingMotors[3].setDirection(DcMotor.Direction.FORWARD);
 
@@ -65,36 +71,20 @@ public class Team13645Async extends LinearOpMode {
         drivingMotors[3].setPower(power);
     }
 
-    public class Team13645 extends LinearOpMode {
-	
-    // Motor Vars    
-    private DcMotor[] drivingMotors = new DcMotor[4];
-
-    // To track time
-    private ElapsedTime time = new ElapsedTime();
-
-    // Decides which way the bot is moving
-	float whichWay(boolean x, boolean y) {
-		if ((x == true) && (y == false)) {
-			return 0.75f;
-		} else if ((x == false) && (y == true)) {
-			return -0.75f;
-		} else {
-			return 0f;
-		}
-	}
-
-
+    // Code Running ------------------------------------------------------
     @Override
     public void runOpMode(){
         // Mapping
-        drivingMotors[0] = hardwareMap.get(DcMotor.class, "motor_fl");
-        drivingMotors[1] = hardwareMap.get(DcMotor.class, "motor_fr");
-        drivingMotors[2] = hardwareMap.get(DcMotor.class, "motor_bl");
-        drivingMotors[3] = hardwareMap.get(DcMotor.class, "motor_br");
+        drivingMotors[0] = hardwareMap.get(DcMotor.class, "wheel_fl");
+        drivingMotors[1] = hardwareMap.get(DcMotor.class, "wheel_fr");
+        drivingMotors[2] = hardwareMap.get(DcMotor.class, "wheel_bl");
+        drivingMotors[3] = hardwareMap.get(DcMotor.class, "wheel_br");
 
-        // Note to self: Add claw motors and servos
+        clawMotor = hardwareMap.get(DcMotor.class, "claw_motor");
+        clawRotServo = hardwareMap.get(Servo.class, "claw_rot");
+        clawCloseServo = hardwareMap.get(Servo.class, "claw_close");
 
+        camServo = hardwareMap.get(Servo.class, "camera");
         aprilTag = AprilTagProcessor.easyCreateWithDefaults();
         visionPortal = VisionPortal.easyCreateWithDefaults(
             hardwareMap.get(WebcamName.class, "Webcam 1"), aprilTag);
